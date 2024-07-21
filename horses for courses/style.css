@@ -1,0 +1,634 @@
+/* الخطوط والألوان الأساسية */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap');
+
+:root {
+    --primary-color: #4A148C;
+    --secondary-color: #8E24AA;
+    --accent-color: #FFB300;
+    --text-color: #FFFFFF;
+    --background-color: #F3E5F5;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+}
+
+/* الهيدر */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+}
+
+.header .logo img {
+    max-width: 100px;
+}
+
+.header-buttons .btn {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.header-buttons .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* محتوى الصفحة */
+main {
+    padding: 20px;
+}
+
+.course-info h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.course-info .course-description,
+.course-info .course-goals,
+.course-info .course-duration,
+.course-info .course-price {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.course-info h2 {
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.course-info p,
+.course-info ul {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.course-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.course-info ul li {
+    display: flex;
+    align-items: center;
+}
+
+.course-info ul li .icon {
+    margin-right: 10px;
+}
+
+/* شهادات الطلاب */
+.testimonials {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.testimonials h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.testimonial-slider {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.testimonial {
+    min-width: 100%;
+    transition: transform 1s ease;
+}
+
+.testimonial img {
+    width: 50%;
+    border-radius: 10px;
+}
+
+/* عدد الخريجين */
+.graduates {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.graduates h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.graduates p {
+    color: var(--secondary-color);
+    font-size: 1.5em;
+}
+
+/* دعوة للعمل */
+.call-to-action {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.call-to-action .btn {
+    background-color: var(--accent-color);
+    color: #0c0c0c;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: monospace;
+    font-size: 22px;
+}
+
+.call-to-action .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* الأسئلة الشائعة */
+.faq {
+    margin-bottom: 40px;
+}
+
+.faq h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.faq-item {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.faq-item:hover {
+    background-color: var(--accent-color);
+}
+
+.faq-item h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.faq-item p {
+    display: none;
+    margin-top: 10px;
+    color: var(--text-color);
+}
+
+/* الفوتر */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+}
+
+.footer .social-media a {
+    color: var(--text-color);
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer .social-media a:hover {
+    color: var(--accent-color);
+}
+
+.footer .contact-info a,
+.footer .footer-links a {
+    color: var(--text-color);
+    display: block;
+    margin: 10px 0;
+    transition: color 0.3s;
+}
+
+.footer .contact-info a:hover,
+.footer .footer-links a:hover {
+    color: var(--accent-color);
+}
+
+/* تجاوب التصميم */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header .header-buttons {
+        margin-top: 10px;
+    }
+
+    .testimonials,
+    .faq {
+        padding: 0 10px;
+    }
+
+    .testimonial {
+        flex-direction: column;
+    }
+}
+
+
+
+
+/* تنسيق الهيدر */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.header .logo img {
+    width: 100px;
+}
+
+.header .header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header .header-buttons .btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.header .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.header .dropbtn {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.header .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--background-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.header .dropdown-content a {
+    color: var(--primary-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.header .dropdown-content a:hover {
+    background-color: var(--accent-color);
+}
+
+.header .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.header .dropdown:hover .dropbtn {
+    background-color: var(--accent-color);
+}
+
+/* فيديوهات الطلاب */
+.student-videos {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.student-videos h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.video {
+    flex: 1 1 100%;
+    max-width: 560px;
+}
+
+.video iframe {
+    width: 100%;
+    height: 315px;
+}
+
+/* قائمة الدورات */
+.available-courses {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.available-courses h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--background-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: var(--primary-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--accent-color);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: var(--accent-color);
+}
+
+/* التكيف مع الشاشات الصغيرة */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .header .logo img {
+        width: 80px;
+    }
+
+    .header .header-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .header .dropdown {
+        margin-top: 10px;
+    }
+
+    .video-container {
+        flex-direction: column;
+    }
+
+    .video iframe {
+        height: 200px;
+    }
+}
+
+
+
+/* زر الدردشة */
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
+
+.chat-button:hover {
+    background-color: #45a049;
+}
+
+/* نافذة الدردشة */
+.chat-window {
+    display: none;
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.chat-output {
+    height: 80%;
+    padding: 10px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ccc;
+}
+
+.chat-input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    box-sizing: border-box;
+}
+
+.chat-input:focus {
+    outline: none;
+}
+
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #210346;
+    color: var(--text-color);
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 39px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(214, 207, 207, 0.1);
+    transition: background-color 0.3s;
+}
+
+.chat-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.chat-window {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+}
+
+.chat-header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.chat-body {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    position: relative;
+    margin: 16px;
+}
+
+.user-message {
+    align-self: flex-end;
+    background-color: var(--primary-color);
+    margin: 20px;
+}
+
+.bot-message {
+    align-self: flex-start;
+    background-color: var(--secondary-color);
+}
+
+.timestamp {
+    font-size: 0.8em;
+    position: absolute;
+    bottom: -20px;
+    left: 10px;
+    color: #424242;
+    margin: -2px;
+}
+
+.chat-footer {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.chat-footer input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.chat-footer button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.chat-header .close-button {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.chat-header .minimize-button {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.chat-status {
+    font-size: 0.8em;
+    color: var(--online-color);
+}
+
+.status-offline {
+    color: var(--offline-color);
+}
+
+.predefined-questions {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.predefined-questions button {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 5px 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}

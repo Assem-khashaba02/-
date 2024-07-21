@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الاشتراك</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="horses-for-courses.ico">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="form-container">
+        <img src="horses for courses.png" alt="لوجو الموقع" class="logo">
+        <form action="#" method="post">
+            <h1><i class="fas fa-user-plus"></i> الاشتراك</h1>
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="الاسم الكامل" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="البريد الإلكتروني" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-phone"></i>
+                <input type="tel" placeholder="رقم الهاتف" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-cake-candles"></i>
+                <input type="number" placeholder="العمر" min="1" max="90" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-venus-mars"></i>
+                <select required>
+                    <option value="" disabled selected>الجنس</option>
+                    <option value="male">ذكر</option>
+                    <option value="female">أنثى</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-list"></i>
+                <select required>
+                    <option value="" disabled selected>اختر نوع الدورة</option>
+                    <option value="children">كورس أطفال</option>
+                    <option value="translation">كورس ترجمة</option>
+                    <option value="language">كورس لغة</option>
+                    <option value="other">أخرى</option>
+                </select>
+            </div>
+            
+            <button type="submit"><i class="fas fa-user-plus"></i> الاشتراك</button>
+            <a href="تسجيل الدخول.html" class="toggle-form">تسجيل الدخول</a>
+        </form>
+    </div>
+</body>
+</html>

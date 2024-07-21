@@ -1,0 +1,158 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* General body styling */
+body {
+    background: linear-gradient(to right, #4A148C, #8E24AA);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    overflow: hidden; /* Ensure no overflow */
+    
+}
+
+/* Container styling */
+.form-container {
+    background: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    position: relative; /* Ensure that container positioning is relative */
+    overflow: hidden; /* Hide any overflow within the container */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Logo styling */
+.logo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 100px;
+    height: auto;
+}
+
+/* Form heading */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Input groups */
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.input-group i {
+    position: absolute;
+    left: 15px;
+    font-size: 20px; /* Adjust font size of icons */
+    color: #4A148C;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 15px 15px 15px 50px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: #4A148C;
+    box-shadow: 0 0 8px rgba(74, 20, 140, 0.3);
+    outline: none;
+}
+
+/* Button styling */
+button {
+    background: #4A148C;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: #8E24AA;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background: #4A148C;
+    transform: translateY(0);
+}
+
+/* Toggle form link styling */
+.toggle-form {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #4A148C;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.toggle-form:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .input-group {
+        flex-direction: column; /* Stack label and input vertically */
+        align-items: stretch;
+    }
+
+    .input-group i {
+        position: relative;
+        margin-bottom: 10px; /* Space between icon and input */
+        font-size: 18px; /* Adjust font size for smaller screens */
+        left: 0;
+    }
+
+    .input-group input,
+    .input-group select,
+    .input-group textarea {
+        padding: 15px;
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
